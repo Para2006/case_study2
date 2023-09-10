@@ -1,0 +1,151 @@
+<html>
+<head>
+  <title>Real Time Image Identification App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body background="bg.jpg">
+    <center>
+        <h3 class="btn btn-danger heading">CASE STUDY BETWEEN GOOGLE LENS AND MOBILENET</h3>
+        <hr>
+        <center>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 heading_div">
+              <img src="logo.1.png" style="width: 150px ; height: 150px;">
+              <hr>VS<hr>
+              <div class="btn btn-primary heading_div2">MobileNet</div>
+              <br>
+        </center>
+
+
+         <ol>
+            <div class="text_image_and_result col-xs-12">
+              <li class="col-sm-4 col-xs-12">
+                <b>Test Image -</b>
+                <img src="bottle,jpg.jpg" class="img-responsive">
+              </li>
+
+              <h5 class="col-sm-4 col-xs-12" style="color: azure; font-size: 21px;">
+                Output on <b>Google Lens</b> - <span>Bottle</span>
+              </h5>
+
+              <h5 id="object1" class="col-sm-4 col-xs-12" style="color :beige; font-size: 21px;">
+                Output on <b>Mobilenet Model</b> - <span>Bottle</span>
+              </h5>
+
+              <div id="mini_result1" class="col-xs-12">
+                <h4 style="color: aliceblue; font-size: 25px;">Result -</h4>
+                <hr><h4>Both are accurate</h4>
+              </div>
+            </div>
+         </ol>
+
+         <hr><hr><hr>
+
+         <ol>
+          <div class="text_image_and_result col-xs-12">
+            <li class="col-sm-4 col-xs-12">
+              <b>Test Image -</b>
+              <img src="eb.jpg" class="img-responsive">
+            </li>
+
+            <h5 class="col-sm-4 col-xs-12" style="color: azure; font-size: 21px;">
+              Output on <b>Google Lens</b> - <span>Earbudes</span>
+            </h5>
+
+            <h5 id="object2" class="col-sm-4 col-xs-12" style="color :beige; font-size: 21px;">
+              Output on <b>Mobilenet Model</b> - <span>EARSER</span>
+            </h5>
+
+            <div id="mini_result2" class="col-xs-12">
+              <h4 style="color: aliceblue; font-size: 25px;">Result -</h4>
+              <hr><h4>Google Lens is more accurate</h4>
+            </div>
+          </div>
+       </ol>
+
+       <br><br><br>
+
+       <ol>
+        <div class="text_image_and_result col-xs-12">
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image -</b>
+            <img src="high.jpg" class="img-responsive">
+          </li>
+
+          <h5 class="col-sm-4 col-xs-12" style="color: azure; font-size: 21px;">
+            Output on <b>Google Lens</b> - <span>Highlighter</span>
+          </h5>
+
+          <h5 id="object3" class="col-sm-4 col-xs-12" style="color :beige; font-size: 21px;">
+            Output on <b>Mobilenet Model</b> - <span>Pen</span>
+          </h5>
+
+          <div id="mini_result3" class="col-xs-12">
+            <h4 style="color: aliceblue; font-size: 25px;">Result -</h4>
+            <hr><h4>Google Lens is more accurate</h4>
+          </div>
+        </div>
+     </ol>
+
+     <br><br><br>
+
+     <ol>
+      <div class="text_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image -</b>
+          <img src="pen.jpg" class="img-responsive">
+        </li>
+
+        <h5 class="col-sm-4 col-xs-12" style="color: azure; font-size: 21px;">
+          Output on <b>Google Lens</b> - <span>Pen</span>
+        </h5>
+
+        <h5 id="object4" class="col-sm-4 col-xs-12" style="color :beige; font-size: 21px;">
+          Output on <b>Mobilenet Model</b> - <span>Pen</span>
+        </h5>
+
+        <div id="mini_result4" class="col-xs-12">
+          <h4 style="color: aliceblue; font-size: 25px;">Result -</h4>
+          <hr><h4>Both are accurate</h4>
+        </div>
+      </div>
+   </ol>
+
+   <br><br><br>
+
+   <ol>
+    <div class="text_image_and_result col-xs-12">
+      <li class="col-sm-4 col-xs-12">
+        <b>Test Image -</b>
+        <img src="pencil.jpg" class="img-responsive">
+      </li>
+
+      <h5 class="col-sm-4 col-xs-12" style="color: azure; font-size: 21px;">
+        Output on <b>Google Lens</b> - <span>Pen</span>
+      </h5>
+
+      <h5 id="object5" class="col-sm-4 col-xs-12" style="color :beige; font-size: 21px;">
+        Output on <b>Mobilenet Model</b> - <span>Pencil</span>
+      </h5>
+
+      <div id="mini_result5" class="col-xs-12">
+        <h4 style="color: aliceblue; font-size: 25px;">Result -</h4>
+        <hr><h4>Mobilenet Modal is more accurate</h4>
+      </div>
+    </div>
+ </ol>
+
+    </center>
+    <div class="copy_right_footer">
+      I have tested 5 images <br>
+      GOOGLE LENS have predicted 4 of them more accurately . And MOBILENET was less accurately.<br>
+      So according to my case study GOOGLE LENS is more Accurate.
+     </div>
+</body>
